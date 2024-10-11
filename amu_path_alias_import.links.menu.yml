@@ -1,6 +1,6 @@
 amu_path_alias_import.admin_settings:
-  title:  'AMU Path Alias Import'
-  description: 'Create path aliases from imported csv containing path aliases and internal system path destination'
+  title: 'AMU Path Alias Import'
+  description: 'Create path aliases from an imported CSV containing path aliases and internal system path destinations.'
   route_name: amu_path_alias_import.admin
   parent: system.admin_config_search
   weight: 0

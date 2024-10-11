@@ -1,7 +1,7 @@
 amu_path_alias_import.admin:
-  path: '/admin/config/amu_path_alias_import/upload'
+  path: '/admin/config/search/path-alias-import/upload'
   defaults:
     _form: '\Drupal\amu_path_alias_import\Form\AmuPathAliasImportForm'
     _title: 'Path Alias Import'
   requirements:
-    _permission: 'administrer AMU path alias import'
+    _permission: 'administer amu path alias import'

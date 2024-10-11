@@ -1,0 +1,4 @@
+administer amu path alias import:
+  title: 'Administer AMU Path Alias Import'
+  description: 'Manage and upload CSV files for path alias import.'
+  restrict access: TRUE

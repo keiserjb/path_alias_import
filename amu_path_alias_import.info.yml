@@ -1,6 +1,9 @@
-name: AMU Path Alias Import
+name: 'AMU Path Alias Import'
 type: module
-description: Import path alias from csv
-core: 8.x
-version: 8.x-1.0
-package: AMU
+description: 'Import path aliases from CSV into Drupal.'
+core_version_requirement: ^10 || ^11
+package: 'AMU'
+dependencies:
+  - path:path
+  - file:file
+  - redirect:redirect
