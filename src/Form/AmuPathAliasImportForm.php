@@ -132,9 +132,15 @@ class AmuPathAliasImportForm extends FormBase {
     foreach ($aliasToSystemPathMappingArray as $line) {
       list($path_alias, $system_path, $langcode) = $line;
 
-      // Ensure the system path and alias start with a '/'.
-      $system_path = '/' . ltrim($system_path, '/');
-      $path_alias = '/' . ltrim($path_alias, '/');
+      // Add '/' to system path if not already present.
+      if (substr($system_path, 0, 1) !== '/') {
+        $system_path = '/' . $system_path;
+      }
+
+      // Add '/' to path alias if not already present.
+      if (substr($path_alias, 0, 1) !== '/') {
+        $path_alias = '/' . $path_alias;
+      }
 
       // Entity query to find existing aliases by source path with access check disabled.
       $existing_aliases = \Drupal::entityQuery('path_alias')
@@ -219,6 +225,4 @@ class AmuPathAliasImportForm extends FormBase {
 
     return $aliasToSystemPathMappingArray;
   }
-
-
 }
